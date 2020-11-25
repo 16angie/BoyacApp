@@ -1,1 +1,53 @@
-<p>lobby works!</p>
+<div class="p-grid p-text-center">
+    <div class="p-col-1">
+        <p-button type="button" (click)="visibleSidebar1 = true" icon="pi pi-bars"></p-button>
+    </div>
+    <div class="p-col-9">
+        <h2>BoyacApp</h2>
+    </div>
+    <div class="p-col-2">
+        <button pButton type="button" icon="pi pi-bell" class="p-button-rounded p-button-secondary p-button-text"
+            badge="8"></button>
+        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+        <button pButton pRipple type="button" icon="pi pi-cog" class="p-button-rounded p-button-secondary p-button-text"
+            (click)="menu.toggle($event)"></button>
+    </div>
+</div>
+<p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+    <h1 class="p-text-center">Menu</h1>
+    <hr>
+    <p-scrollPanel [style]="{width: '100%', height: '600px'}" styleClass="custombar1">
+        <div class="p-grid p-flex-column">
+            <div class="p-col">
+                <button pButton type="button" icon="pi pi-chart-line" label="Inicio" (click)="visibleSidebar1 = false"
+                    class="p-button-secondary p-button-text" [routerLink]="['dashboard']"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" icon="pi pi-desktop" label="POS" class="p-button-secondary p-button-text"
+                    [routerLink]="['pos']" (click)="visibleSidebar1 = false"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" icon="pi pi-shopping-cart" label="Marketplace"
+                    [routerLink]="['marketplace']" class="p-button-secondary p-button-text"
+                    (click)="visibleSidebar1 = false"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" icon="pi pi-tags" label="Productos" [routerLink]="['productos']"
+                    class="p-button-secondary p-button-text" (click)="visibleSidebar1 = false"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" icon="pi pi-users" label="Clientes" [routerLink]="['clientes']"
+                    class="p-button-secondary p-button-text" (click)="visibleSidebar1 = false"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" icon="pi pi-tags" label="Inventarios" [routerLink]="['inventarios']"
+                    class="p-button-secondary p-button-text" (click)="visibleSidebar1 = false"></button>
+            </div>
+            <div class="p-col">
+                <button pButton type="button" icon="pi pi-users" label="Usuarios" [routerLink]="['usuarios']"
+                    class="p-button-secondary p-button-text" (click)="visibleSidebar1 = false"></button>
+            </div>
+        </div>
+    </p-scrollPanel>
+</p-sidebar>
+<router-outlet></router-outlet>

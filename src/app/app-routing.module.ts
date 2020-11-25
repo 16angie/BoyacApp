@@ -12,18 +12,16 @@ const routes: Routes = [
     path: '',
     redirectTo: 'auth',
     pathMatch: 'full'
-  } /*
+  },
   {
     path: 'auth',
     loadChildren: () =>
       import('./modules/login/login.module').then(module => module.LoginModule)
-  }*/,
-  ,
+  },
   {
     path: 'lobby',
     loadChildren: () =>
-      import('./modules/lobby/lobby.module').then(module => module.LobbyModule),
-    data: { title: 'Lobby' }
+      import('./modules/lobby/lobby.module').then(module => module.LobbyModule)
   },
   { path: 'not-found', component: NotFoundComponent },
   {

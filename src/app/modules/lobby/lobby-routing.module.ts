@@ -11,7 +11,7 @@ const routes: Routes = [
     data: { title: 'Lobby' },
     children: [
       {
-        path: 'dashboard',
+        path: '',
         component: DashboardComponent,
         data: { title: 'Dashboard' }
       }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+
 //forms
 import { ReactiveFormsModule } from '@angular/forms'
 import { FormsModule } from '@angular/forms'
@@ -18,7 +19,6 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner'
 import { SplitButtonModule } from 'primeng/splitbutton'
 import { SlideMenuModule } from 'primeng/slidemenu'
 import { MenubarModule } from 'primeng/menubar'
-
 import { MatMenuModule } from '@angular/material/menu'
 import { RippleModule } from 'primeng/ripple'
 import { DropdownModule } from 'primeng/dropdown'
@@ -26,9 +26,14 @@ import { AutoCompleteModule } from 'primeng/autocomplete'
 import { CardModule } from 'primeng/card'
 import { InputNumberModule } from 'primeng/inputnumber'
 import { LobbyRoutingModule } from './lobby-routing.module'
+import { AppRoutingModule } from 'src/app/app-routing.module'
+import { DashboardComponent } from './components/dashboard/dashboard.component'
+import { MessagesModule } from 'primeng/messages'
+import { MessageModule } from 'primeng/message'
+import { LoginModuleComponent } from './components/login-module/login-module.component'
 
 @NgModule({
-  declarations: [],
+  declarations: [DashboardComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -53,10 +58,10 @@ import { LobbyRoutingModule } from './lobby-routing.module'
     DropdownModule,
     CardModule,
     InputNumberModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    MessagesModule,
+    MessageModule
   ],
-  providers: [
-    //servicios
-  ]
+  providers: []
 })
 export class LobbyModule {}
