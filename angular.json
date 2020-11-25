@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "BoyacApp"
+    }
+  },
+  "defaultProject": "BoyacApp",
+  "cli": {
+    "analytics": "c5fbf0ed-3d6e-4597-83ce-0a6e8d6ba6da"
+  }
 }
