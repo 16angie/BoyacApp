@@ -26,11 +26,9 @@ import { AutoCompleteModule } from 'primeng/autocomplete'
 import { CardModule } from 'primeng/card'
 import { InputNumberModule } from 'primeng/inputnumber'
 import { LobbyRoutingModule } from './lobby-routing.module'
-import { AppRoutingModule } from 'src/app/app-routing.module'
 import { DashboardComponent } from './components/dashboard/dashboard.component'
 import { MessagesModule } from 'primeng/messages'
 import { MessageModule } from 'primeng/message'
-import { LoginModuleComponent } from './components/login-module/login-module.component'
 
 @NgModule({
   declarations: [DashboardComponent],

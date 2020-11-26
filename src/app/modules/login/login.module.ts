@@ -18,8 +18,9 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner'
 import { SidebarModule } from 'primeng/sidebar'
 
 import { ReactiveFormsModule } from '@angular/forms'
+import { SignInComponent } from './components/sign-in/sign-in.component'
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, SignInComponent],
   imports: [
     CommonModule,
     LoginRoutingModule,

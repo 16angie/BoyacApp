@@ -1,0 +1,589 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Font Awesome */
+
+@import'~@fortawesome/fontawesome-free/css/all.css';
+
+/** Variables de colores*/
+
+$color-primary-blue: #2E2681;
+$color-secundary-aqua-blue: #67B7CF;
+$color-success-green: #10dc60;
+$color-warning-yellow: #ffce00;
+$color-danger-red: #f04141;
+$color-light-red: #f12345;
+$color-dark-blue: #08014C;
+$color-light-gray: #e9e9e9;
+$color-dark-gray: #646464;
+$color-white: #ffffff;
+$color-coffe: #9A643F;
+$color-orange: rgb(255, 144, 70);
+html,
+body {
+    height: 100%;
+    font-size: 15px;
+    text-shadow: 0px 0px 0px !important;
+    font-family: "Roboto" !important;
+}
+
+//--------------Tablas------------
+
+/**Full Tamaño*/
+
+.full-width {
+    width: 100% !important;
+}
+
+.full-height {
+    height: 100vh !important;
+}
+
+.full-height-100 {
+    height: 100% !important;
+}
+
+
+/*Centrado de headeer*/
+
+.mat-sort-header-container {
+    display: flex;
+    justify-content: center;
+}
+
+.none {
+    display: none !important;
+}
+
+
+/* Aliniaciones de texto------------------*/
+
+#center {
+    text-align: center !important;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.align-justify {
+    text-align: justify !important;
+}
+
+.align-left {
+    text-align: left !important;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+
+/*Estilos de modulos*/
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+}
+
+h1.example-app-name {
+    margin-left: 8px;
+}
+
+.example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+}
+
+.example-tab-icon {
+    margin-right: 10px;
+}
+
+.btn-settings {
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    width: 100% !important;
+}
+
+.initial {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+}
+
+.mat-toolbar {
+    background-color: $color-dark-blue !important;
+}
+
+
+/* Caja fondo blanco borde redondo*/
+
+.box {
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    background-color: $color-white;
+    padding: 3% !important;
+    max-width: 350px;
+    width: auto;
+    min-width: 300px;
+}
+
+.widthbox {
+    max-width: 350px;
+    width: auto;
+    min-width: 350px;
+}
+
+.width-350 {
+    max-width: 350px;
+    width: auto;
+    min-width: 300px;
+}
+
+
+/* Caja fondo blanco borde redondo*/
+
+.box-without-padding {
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    background-color: $color-white;
+    -webkit-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+
+/** Todos los elementos del form ocupan todo el ancho del componente padre */
+
+.form-container>* {
+    width: 100%;
+}
+
+//--------------Barra opciones lobby------
+
+/*Boton de la derecha*/
+
+.tool-right {
+    height: 54.81px;
+    margin-right: 15px;
+}
+
+
+/*Filtro de la izquierda*/
+
+.tool-left {
+    margin-left: 15px;
+}
+
+
+/*Color de fondo filtro*/
+
+.mat-form-field-outline {
+    background-color: $color-white !important;
+}
+
+//-------------CSS Flexbox---------------
+
+/* Flex row-wrap */
+
+.flex-row-wrap {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+
+/* Flex column down */
+
+.flex-column-down {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+//------------Color Text-----------
+
+/** Color para mensaje de error */
+
+.color-red {
+    color: $color-danger-red !important;
+}
+
+.color-blue {
+    color: $color-primary-blue !important;
+}
+
+.color-aqua-blue {
+    color: $color-secundary-aqua-blue !important;
+}
+
+.color-yellow {
+    color: $color-warning-yellow !important;
+}
+
+.color-dark-gray {
+    color: $color-dark-gray !important;
+}
+
+.color-light-gray {
+    color: $color-light-gray !important;
+}
+
+.color-green {
+    color: $color-success-green !important;
+}
+
+.color-coffe {
+    color: $color-coffe !important;
+}
+
+.color-orange {
+    color: $color-orange !important;
+}
+
+.btn-red {
+    background-color: $color-danger-red !important;
+    color: $color-white !important;
+}
+
+.btn-light-red {
+    background-color: $color-light-red !important;
+    color: $color-white !important;
+}
+
+.btn-blue {
+    background-color: $color-primary-blue !important;
+    color: $color-white !important;
+}
+
+.btn-aqua-blue {
+    background-color: $color-secundary-aqua-blue !important;
+    color: $color-white !important;
+}
+
+.btn-yellow {
+    background-color: $color-warning-yellow !important;
+    color: $color-white !important;
+}
+
+.btn-green {
+    background-color: $color-success-green !important;
+    color: $color-white !important;
+}
+
+//---------------Dialogs----------
+.mat-dialog-container {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.with-out-margin {
+    margin: 0px !important
+}
+
+.with-out-padding {
+    padding: 0px !important
+}
+
+.margin-15px {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+//---------------Tabs-------------
+
+/* Styles for tab labels */
+
+.mat-tab-label {
+    min-width: 120px !important;
+    max-height: 40px !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-right: 1px solid $color-light-gray;
+    border-left: 1px solid $color-light-gray;
+    color: black !important;
+    padding: 0% !important;
+    opacity: 1 !important;
+    max-width: 180px;
+    background-color: rgb(247, 247, 247);
+}
+
+.mat-tab-label-content {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+
+/* Styles for the active tab label */
+
+.mat-tab-label-active {
+    color: $color-white !important;
+    background-color: $color-secundary-aqua-blue !important;
+}
+
+.table-min-width {
+    min-width: 1100px !important;
+}
+
+.overflow-x {
+    border-radius: 5px !important;
+    overflow-x: auto !important;
+}
+
+.btn-close-dialog {
+    color: $color-danger-red;
+    font-size: 30px;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.p-information {
+    background-color: $color-light-gray;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px !important;
+    color: black !important;
+}
+
+.title-card-sim-details {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    color: $color-white !important;
+    background-color: $color-secundary-aqua-blue !important;
+    font-size: 15px !important;
+    padding: 2px !important;
+    border-radius: 5px !important;
+}
+
+.title-card-landing {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    color: $color-white !important;
+    background-color: $color-primary-blue !important;
+    font-size: 15px !important;
+    padding: 2px !important;
+    border-radius: 5px !important;
+}
+
+.title-card-landing-2 {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    color: $color-white !important;
+    background-color: $color-danger-red !important;
+    font-size: 15px !important;
+    padding: 2px !important;
+    border-radius: 5px !important;
+}
+
+.mat-header-cell,
+.mat-sort-header {
+    background-color: $color-light-red !important;
+    height: 20px !important;
+    color: white !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+
+.mat-sort-header-container {
+    display: flex;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.mat-header-cell {
+    text-align: center !important;
+}
+
+.mat-cell {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+td,
+th {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.mat-button {
+    padding: 2px !important;
+    width: 30px !important;
+    min-width: 30px !important;
+}
+
+.contenido {
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+@media (max-width: 970px) {
+    .align-nav {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .align-logo-nav {
+        text-align: center !important;
+    }
+}
+
+.footer-faq {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px !important;
+    background-color: black !important;
+    font-size: 12px !important;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-other-modules {
+    width: 100% !important;
+    z-index: 999999999999999 !important;
+    background-image: url(/assets/landing/section5-2.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paginator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 56px;
+    padding: 0 8px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    color: rgba(0, 0, 0, .54);
+    background-color: white !important;
+    font-size: 12px !important;
+}
+
+.paginator-page-size {
+    display: flex;
+    align-items: baseline;
+    margin-right: 8px;
+}
+
+.paginator-select {
+    margin: 6px 4px 0 4px;
+    width: 56px
+}
+
+.paginator-range-actions {
+    display: flex;
+    align-items: center;
+    width: 166.4px !important;
+}
+
+.range-label {
+    margin: 0 32px 0 24px;
+}
+
+.button-arrow {
+    padding: 0;
+    min-width: 0;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    color: rgba(0, 0, 0, .54) !important;
+}
+
+h1 {
+    font-size: 46px !important;
+}
+
+h2 {
+    font-size: 38px !important;
+}
+
+h3 {
+    font-size: 30px !important;
+}
+
+h4 {
+    font-size: 25px !important;
+}
+
+h5 {
+    font-size: 20px !important;
+}
+
+h6 {
+    font-size: 14px !important;
+}
+
+.mat-calendar-body-cell {
+    max-width: 36px !important;
+    min-width: 36px !important;
+    widows: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+    height: 36px !important;
+}
+
+.mat-button{
+    outline: none !important;
+}
+
+.mat-horizontal-stepper-header {
+    pointer-events: none !important;
+}
+
+.mat-horizontal-content-container {
+    padding: 0px !important;
+}
+
+::ng-deep ngx-gallery .ngx-gallery-arrow {
+    color: #e9e9e9 !important;
+}
+
+::ng-deep ngx-gallery .ngx-gallery-image {
+    background-color: #ffffff !important;
+}
+
+.btnSignIn {
+    margin-top: 10px !important;
+}
