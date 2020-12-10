@@ -1,0 +1,21 @@
+
+:host::ng-deep .form-control {
+	border-radius: 40px;
+}
+
+#form div {
+	align-items: center;
+	max-width: 500px;
+}
+
+:host::ng-deep .p-button {
+	border-radius: 40px;
+}
+
+:host::ng-deep .p-button-help {
+	padding: 10px;
+	font-size: 15px;
+	color: #a35700 !important;
+	background-color: #a58d07;
+	border-radius: 16px;
+}

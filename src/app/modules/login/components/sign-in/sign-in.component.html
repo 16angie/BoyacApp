@@ -1,61 +1,51 @@
-<div class="p-fluid p-formgrid p-grid">
-    <div class="p-col-2">
-
-    </div>
-    <div class="p-col-8 p-text-center">
-        <p-card>
-            <p-header>
-                <div class="p-grid">
-                    <div class="p-col">
-                        <h5>INICIAR SESION</h5>
-                    </div>
-                </div>
-            </p-header>
-            <form [formGroup]="formGroup">
-                <div class="p-grid">
-                    <div class="p-col-2">
-                        <label for="email">Correo</label>
-                    </div>
-                    <div class="p-col-4">
-                        <input id="email" type="email" class="form-control" formControlName="email" pInputText>
-                    </div>
-                    <div class="p-col-2">
-                        <label for="password">Contraseña</label>
-                    </div>
-                    <div class="p-col-4">
-                        <input pPassword type="password" class="form-control" formControlName="password" />
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="p-grid" *ngIf="!visibleSidebar1">
-                    <div class="p-col-4 p-offset-4 p-text-center">
-                        <p-button label="Ingresar" icon="pi pi-sign-in" iconPos="right" (click)="signIn()">
-                        </p-button>
-                    </div>
-                </div>
-                <div class="p-grid">
-                    <div class="p-col-8 p-offset-2 p-text-center">
-                        <div class="visibleSidebar1" *ngIf="visibleSidebar1">
-                            <p-progressSpinner></p-progressSpinner>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <p-footer>
-                <div class="p-grid">
-                    <div class="p-col-4 p-offset-1 p-text-center">
-                        <button pButton pRipple type="button" label="Recuperar contraseña"
-                            class="p-button-help p-button-text" [routerLink]="['/auth/requestcode']"></button>
-                    </div>
-                    <div class="p-col-4 p-offset-2 p-text-center">
-                        <button pButton pRipple type="button" label="Registrarse" class="p-button-help p-button-text"
-                            [routerLink]="['/auth/registry']"></button>
-                    </div>
-                </div>
-            </p-footer>
-        </p-card>
-    </div>
-    <div class="p-col-2">
+<div class="p-grid p-text-center">
+    <div class="p-col">
+        <h1>Ingresar</h1>
     </div>
 </div>
+<div id="form" class="p-d-flex p-jc-center">
+    <form [formGroup]="formGroup">
+        <div class="p-fluid p-jc-center">
+            <div class="p-field p-col-12">
+                <span class="p-input-icon-left">
+                    <i class="fa fa-at"></i>
+                    <input id="email" type="email" size="30" maxlength="30" class="form-control" class="form-control"
+                        formControlName="email" placeholder="Correo" pInputText>
+                </span>
+            </div>
+            <div class="p-field p-col-12">
+                <span class="p-input-icon-left">
+                    <i class="fas fa-unlock-alt"></i>
+                    <input id="password" pPassword type="password" size="40"  maxlength="40" class="form-control" class="form-control"
+                        formControlName="password" placeholder="Contraseña" pInputText>
+                </span>
+            </div>
+        </div> <br>
+    </form>
+</div>
+<div class="p-grid" *ngIf="!visibleSidebar1">
+    <div class="p-col-8 p-offset-2 p-text-center">
+        <p-button label="Ingresar" icon="pi pi-sign-in" iconPos="right" (click)="signIn()"></p-button>
+    </div>
+</div>
+<div class="p-grid">
+    <div class="p-col-8 p-offset-2 p-text-center">
+        <div class="visibleSidebar1" *ngIf="visibleSidebar1">
+            <p-progressSpinner></p-progressSpinner>
+        </div>
+    </div>
+</div>
+
+<hr>
+<p-footer>
+    <div class="p-grid">
+        <div class="p-col-4 p-offset-1 p-text-center">
+            <button pButton pRipple type="button" label="Recuperar contraseña" class="p-button-help p-button-text"
+                [routerLink]="['/auth/requestcode']"></button>
+        </div>
+        <div class="p-col-4 p-offset-2 p-text-center">
+            <button pButton pRipple type="button" label="Registrarse" class="p-button-help p-button-text"
+                [routerLink]="['/auth/registry']"></button>
+        </div>
+    </div>
+</p-footer>
